@@ -1,0 +1,38 @@
+package com.company.lab03;
+import java.util.Arrays;
+import java.util.Scanner;
+public class zad3
+{
+    public static int[] suma()
+    {
+        Scanner scannner = new Scanner(System.in);
+        System.out.println("Jaki ma być rozmiar tabeli?: ");
+
+        int rozmiar;
+          rozmiar = scannner.nextInt();
+
+        int[] tabNR1 = new int[rozmiar];
+
+        int[] tabNR2 = new int[rozmiar];
+        
+        int[] tabNR3 = new int[rozmiar];
+
+          for (int i = 0; i < rozmiar; i++) {
+              System.out.println("Jaka liczba ma być na miejscu o numerze ["+i+"]?:");
+                tabNR1[i] = scannner.nextInt();
+        }
+         for (int i = 0; i < rozmiar; i++) {
+             System.out.println("Jaka liczba ma być na miejscu o numerze ["+i+"]?:");
+                tabNR2[i] = scannner.nextInt();
+        }
+         for (int i = 0; i < rozmiar; i++) {
+                tabNR3[i] = tabNR1[i] + tabNR2[i];
+        }
+
+        return tabNR3;
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Suma obu tablic wynosi: " +Arrays.toString(suma()));
+    }
+}

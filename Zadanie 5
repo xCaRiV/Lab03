@@ -1,0 +1,17 @@
+package com.company.lab03;
+public class zad5 {
+    public static int GrCoDi(int a, int b) {
+        while (b != a) {
+            if (b > a) {
+                b -= a;
+            }
+            else {
+                a -= b;
+            }
+        }
+        return b;
+    }
+    public static void main(String[] args) {
+        System.out.println("Największym wspólnym dzielnikiem obu liczb jest: " +GrCoDi(48, 32));
+    }
+}
